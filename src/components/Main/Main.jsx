@@ -1,20 +1,20 @@
 import Column from "../Column/Column";
-import { cardList, statusList } from "../../data";
 
-export default function Main (){
+export default function Main ({cardList, statusList, loading}){
     
     return (
         <main className="main">
 			<div className="container">			
 				<div className="main__block">
 					<div className="main__content">
-                        {statusList.map((status)=>(
+                        {loading ? statusList.map((status)=>(
                             <Column
                                 key={status}
                                 title={status}
                                 cardList={cardList.filter((card) => card.status === status)}
+
                             />	
-                        ))}	
+                        )) : "Данные загружаются"}	
 					</div>
 				
 				</div>

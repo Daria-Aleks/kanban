@@ -1,6 +1,4 @@
-import {card, theme, name} from "../../data"
-
-export default function Card({name, theme, date}){
+export default function Card({theme, title, date}){
     return(
         <div className="cards__card card">
 										<div className="card__group">
@@ -17,7 +15,7 @@ export default function Card({name, theme, date}){
 										</div>
 										<div className="card__content">
 											<a href="" target="_blank">
-												<h3 className="card__title">Тайтл</h3>
+												<h3 className="card__title">{title}</h3>
 											</a>
 											<div className="card__date">
 												<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -31,7 +29,7 @@ export default function Card({name, theme, date}){
 														</clipPath>
 													</defs>
 												</svg>
-												<p>30.10.23</p>
+												<p>{date}</p>
 											</div>
 										</div>
 									</div>

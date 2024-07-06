@@ -1,6 +1,6 @@
 import Calendar from "../Calendar/Calendar";
 
-export default function PopNewCard (){
+export default function PopNewCard ({onCardClick}){
     return (
         <div className="pop-new-card" id="popNewCard">
 				<div className="pop-new-card__container">
@@ -35,7 +35,7 @@ export default function PopNewCard (){
 									</div>
 								</div>
 							</div>
-							<button className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
+							<button onClick={onCardClick} className="form-new__create _hover01" id="btnCreate">Создать задачу</button>
 						</div>
 					</div>
 				</div>
